@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pitcher_score', function (Blueprint $table) {
+        Schema::create('pitcher_scores', function (Blueprint $table) {
             $table->id();
             $table->integer('pitching');//登板数
             $table->integer('starter');//先発
@@ -44,6 +44,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('pitcher_score');
+        Schema::dropIfExists('pitcher_scores');
     }
 };
